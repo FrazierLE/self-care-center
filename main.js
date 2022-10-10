@@ -12,8 +12,7 @@ var mantras = ['Take it one day at a time',
 'This too shall pass',
 'Mid mods got nothing on you',
 'A tired brain does not code well - sleep is important',
-'Make time for you']
-
+'Make time for you'];
 var affirmations = [
 'You will make it through Turing in one piece',
 'You are not supposed to know everything',
@@ -24,7 +23,8 @@ var affirmations = [
 'You are smart enough for this',
 'You can handle this',
 'Take a break, walk away, clear your head - you will get it',
-'Do not let yesterday take up too much of today']
+'Do not let yesterday take up too much of today'];
+var createdMessages = [];
 
 var meditationMan = document.querySelector('#logo');
 var receiveMessageButton = document.querySelector('#receive-message');
@@ -36,6 +36,11 @@ var animation = document.querySelector('.loader');
 var fade = document.querySelector('.fade-in-text');
 var clearButton = document.querySelector('#clear');
 var clearForm = document.querySelector('#clearIt');
+var addButton = document.querySelector('#add-message');
+var inputForm = document.querySelector('#create-message');
+var submit = document.querySelector('#submit');
+var userMessage = document.querySelector('#my-own-message');
+
 
 function randomMessage(array) {
   var index = Math.floor(Math.random() * array.length)
@@ -75,7 +80,7 @@ function display() {
     hitMeWithThatMessage.innerHTML += affirmMe();
   } else if (mantraButton.checked === true) {
     hitMeWithThatMessage.innerHTML += mantraMeUp();
-  }
+  } else {hitMeWithThatMessage.innerHTML += `${userMessage.value}`}
   reset()
 }
 
@@ -121,3 +126,19 @@ function changeItBack() {
   body.classList.remove('color-change-affirm');
   body.classList.remove('color-change-mantra');
 }
+
+addButton.addEventListener('click', createYourOwnMessage);
+function createYourOwnMessage() {
+  inputForm.classList.remove('hidden');
+}
+
+submit.addEventListener('click', createYourMessage);
+function createYourMessage() {
+  takeItAway();
+  {setTimeout(display, 4000)}
+  {setTimeout(clearIt, 4000)}
+  doNotRepeat();
+  inputForm.classList.add('hidden'); 
+}
+
+
