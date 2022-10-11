@@ -9,10 +9,13 @@ This is a self-care application that allows the user to choose between receiving
 
 ### Installation Instructions:
 [//]: <>
-Step 1: Fork the project to Github account
-Step 2: Clone the repository tolocal machine using git clone and the url
-Step 3: `cd` into the project using the terminal
-Step 4: open it up on a browser by typing 'index.html' into the terminal
+1. Fork the project to Github account
+1. Clone the repository tolocal machine using git clone and the url
+1. `cd` into the project using the terminal
+1. open it up on a browser by typing 'index.html' into the terminal
+
+Deployed-link: https://frazierle.github.io/self-care-center/
+
 ### Preview of App:
 [//]: <> 
 ![Screen Shot 2022-09-10 at 6 52 39 PM](https://user-images.githubusercontent.com/108101979/189506968-30eff649-b377-4412-907b-b0c66f3ff480.png)
